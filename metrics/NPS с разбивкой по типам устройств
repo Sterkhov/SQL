@@ -1,5 +1,5 @@
 --Рассчитайте NPS с разбивкой по типам устройств.
---Округлите результат до двух знаков после запятой с помощью функции ROUND
+--Округлите результат до двух знаков после запятой 
 select app_id,
 		sum(case when rating >= 9 then count_evaluations else 0 end) promoters,
         sum(case when rating <= 6 then count_evaluations else 0 end) detractors,
